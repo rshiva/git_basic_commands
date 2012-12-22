@@ -1,0 +1,71 @@
+git add ... to undo "git add" do => git reset
+git add --all (adds all modified and unstaged files)
+git add docs/*.txt (directoy and file formats to add)
+git add docs/ (add  all the files in the directory)
+git add "*.txt" (add all the files in the whole project)
+
+
+Staging and remotes
+
+git diff --staged (view staged difference)
+
+git reset HEAD <filename> (unstage the files ,HEAD refers to last commit,current branch)
+
+git checkout -- <Filename> (blow away all changes since last commit)
+
+git commit -a -m "commit message" (-a add changes from all tracked files,doesn't add new untracked files)
+
+undoing a commit (dont do these after push)
+git reset --soft HEAD^ (soft -reset into staging.^ move to
+ commit before head i.e last commit)
+
+git reset --hard HEAD^ (undo last commit and all changes .. only if something went horribly )
+
+git reset --hard HEAD^^ (undo last 2 commits and all changes)
+
+sharing coding
+
+git remote add <name> <address>
+git remote add origin https://address (add:new remote,origin: our name for this remote(can be any name))
+
+git remote -v (show remote reps)
+
+forgot to add a file in commit
+git add <filename>
+git commit --amend -m "message" (amend adds to the last commit)
+
+
+git push -u origin master(origin: remote rep name, master:local branch to push)
+
+git remote rm <name> (remove remotes)
+
+git pull
+
+
+merging a branch to master
+git checkout master
+git merge branch_name
+
+
+git commit
+
+git  push
+
+git push origin branch (pushing branch in github)
+
+git pull upstream master(pull latest code from forked master)
+
+git push origin --delete branchname (delete branch from github)
+
+
+
+
+git stash( the point where u want to create or work on other branch without commiting the current branch)
+
+git stash list(to view list of stash)
+
+git stash apply( to apply latest stash)
+
+git stash apply stash@{2} (Specifying stash name) 
+
+git branch -D brachname(deletes branch locally)
