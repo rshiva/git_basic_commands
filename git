@@ -47,6 +47,40 @@ git checkout master
 git merge branch_name
 
 
+Remote branch and tags
+
+git push origin branch_name (pushing your local branch to remote )
+
+git branch -r (to see all the remote branch)
+
+git remote show origin
+
+git push origin :branch_name (to delete the remote branch Note: you will still have local branch)
+
+git branch -d branch_name (delete branch locally ..force delete use capital -D)
+
+If say someone delete the branch and your working on it 
+do check
+
+git remote show origin
+then
+git remote prune origin (to clean up the remote branches)
+
+
+Tagging
+A tag is a reference to a commit(used mostly for release versioning )
+
+git tag (list all tags)
+
+git checkout tag_name (checkout code at commit)
+
+git tag -a tag_name -m "message" (to add new tag)
+
+git push --tags (git push tags)
+
+git checkout tag_name
+
+
 git commit
 
 git  push
@@ -56,8 +90,6 @@ git push origin branch (pushing branch in github)
 git pull upstream master(pull latest code from forked master)
 
 git push origin --delete branchname (delete branch from github)
-
-
 
 
 git stash( the point where u want to create or work on other branch without commiting the current branch)
