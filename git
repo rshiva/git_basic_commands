@@ -80,10 +80,58 @@ git push --tags (git push tags)
 
 git checkout tag_name
 
+Rebase
 
-git commit
+git rebase
+1.Move all changes to master which are note in origin/master to a temporary area.
+2. Run all origin/master commits
+3. Run all commits in the temporary area,one at a time
 
-git  push
+
+coloring the log
+git config --global color.ui true
+
+git log in oneline
+git log --pretty=oneline
+
+git log --oneline -p (patch output)
+
+git log --oneline --stat (show how many insertion deletion where made)
+
+git log  --oneline --graph (visual rep branches and commits)
+
+date range  to see log
+git log --until=1.minute.ago
+git log --since=1.day.ago
+git log --since=1.month.ago --until=2.weeks.ago
+
+
+earlier commits
+git diff HEAD^ (parent of latest commit)
+git diff HEAD^^
+git diff HEAD~5 (five commits ago)
+
+git diff master another_branch_name (if you want to compare between to branches)
+
+Blame
+git blame file_name(to see complete history of the file,who made changes when and what changes where made)
+
+excluding
+when u want add a folder in project but dont want to add in git rep put the name of the folder in .git/info/exclude
+
+remove files
+git rm file_name
+
+git rm --caced filename (wont be deleted from file system)
+
+Aliases
+
+git config --global alias.st status git st ==> git status
+git confi --global  alias.co checkout
+git confi --global  alias.br branch
+git confi --global  alias.ci commit
+
+_______old__________
 
 git push origin branch (pushing branch in github)
 
